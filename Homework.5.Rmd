@@ -4,9 +4,9 @@ author: "Jose Nieves"
 date: "February 26, 2016"
 output: html_document
 ---
-                INTD 8065 Data Analysis for Cancer Research
+                #INTD 8065 Data Analysis for Cancer Research
                         
-                                Homework #5
+                                ##Homework #5
 
 1.	Run the t test for the comparison of control diet and high fat diet 
         presented in page 51-52 of Irizarry and Love (2015) assuming equality of                   variances. 
