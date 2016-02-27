@@ -4,14 +4,15 @@ author: "Jose Nieves"
 date: "February 26, 2016"
 output: html_document
 ---
-                #INTD 8065 Data Analysis for Cancer Research
+                INTD 8065 Data Analysis for Cancer Research
                         
-                                ##Homework #5
+                                Homework #5
 
 1.	Run the t test for the comparison of control diet and high fat diet 
-        presented in page 51-52 of Irizarry and Love (2015) assuming equality of                   variances. 
+    presented in page 51-52 of Irizarry and Love (2015) assuming equality of
+    variances. 
         
-        Compare your result with that of the analysis obtained in the book.
+      Compare your result with that of the analysis obtained in the book.
 
 ```{r}
 library(dplyr)
@@ -46,7 +47,7 @@ library(pwr)
         
         sd <- sqrt(((n1-1)*var(hfPopulation)+(n2-1)*var(controlPopulation))/(n1+n2))
         
-        where n1 and n2 are the sizes of hfPopulation and controlPopulation,                       respectively
+        where n1 and n2 are the sizes of hfPopulation and controlPopulation, respectively
         
 ```{r}
 url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/
@@ -73,7 +74,8 @@ print(power.t$power)
 
 4.	Use now  power.t.test for calculating the power for N=5, 10, 15, 20, 25,
         30, 35, 40, 45, 50 (this is the Ns sequence created for the graph in page 66). 
-        Overimpose your results to the graph generated in the book using red lines and             dots.
+        Overimpose your results to the graph generated in the book using red lines and
+        dots.
 
 Hint:   You can pass a vector of N’s to the function, and extract the power 
         values from the object you created using object$power. For overimposing your 
@@ -89,7 +91,8 @@ plot(Ns,power.Ns$power,
      col = 4)
 ```      
 
-5.	Repeat part 3. for the graph of power for different values of alphas shown in              page 67.
+5.	Repeat part 3. for the graph of power for different values of alphas shown in              
+    page 67.
 
 ```{r, echo=FALSE}
 alphas <- c(0.1,0.05,0.01,0.001,0.0001) 
