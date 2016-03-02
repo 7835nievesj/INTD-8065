@@ -39,7 +39,7 @@ tempMortality <- data.frame(Temperature,Mortality.rate)
 pairs(tempMortality)
 cor(tempMortality)
 ```
-The estimated correlations show compatible results with the graphphics, where Tempertature and Mortality rate seem to have a srtong association. 
+The estimated correlations show compatible results with the graphphics, where Tempertature and Mortality rate seem to have a strong association. 
 
 ###2. Fit the regression
 
