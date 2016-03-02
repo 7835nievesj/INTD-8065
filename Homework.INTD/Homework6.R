@@ -13,24 +13,24 @@ cor(tempMortality)
 
 #2. Fit the regression
 
-morT.lmod1 <- lm(Mortality.rate~Temperature, data = tempMortality)
-names(morT.lmod1)
-coef(morT.lmod1)
+morTemp.lm1 <- lm(Mortality.rate~Temperature, data = tempMortality)
+names(morTemp.lm1)
+coef(morTemp.lm1)
 
 #3. Which parameter estimates are significant?
 
-summary(morT.lmod1)
+summary(morTemp.lm1)
 
 #4. How much of the variance is explained by the regression?
 
-morT.lmod0 = lm(Mortality.rate ~ 1, data=tempMortality)
-summary(morT.lmod0)
-anova(morT.lmod0,morT.lmod1)
+morTemp.lm0 = lm(Mortality.rate ~ 1, data=tempMortality)
+summary(morTemp.lm0)
+anova(morTemp.lm0,morTemp.lm1)
 
 #5. Plot the residuals. What is your diagnostics? 
 
 par(mfrow=c(2,2))
-plot(morT.lmod1,pch=15)
+plot(morTemp.lm1,pch=15)
 
 #6. Find the confidence intervals of the regression line for the following 
 #   values of T:  35,40,45,50
@@ -43,13 +43,13 @@ with(tempMortality,c(mean(Temperature),mean(Mortality.rate)))
 
 # Confidence interval for mean of tempMortality
 
-predict(morT.lmod1,data.frame(Temperature = temp,
+predict(morTemp.lm1,data.frame(Temperature = temp,
                  Mortality.rate = 83.34375),interval="confidence")
 
 #7. Find the prediction interval of the regression line for the same values of 
 #   previous question.
 
-predict(morT.lmod1,data.frame(Temperature = temp,
+predict(morTemp.lm1,data.frame(Temperature = temp,
                  Mortality.rate = 83.34375),interval="prediction")
 
 #8. What is your overall conclusion? 
