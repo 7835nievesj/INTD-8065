@@ -1,0 +1,84 @@
+---
+title: 'Week7: One Way Anova'
+author: "Jose Nieves"
+date: "March 4, 2016"
+output: html_document
+---
+
+# One Way Anova Lecture
+
+Consider _k_ groups of observations, and let n_i be the number of observations in group _i. 
+We want to know if the __means__ of the groups are equal. 
+
+```{r}
+setw("/Users/jose_nieves/Documents/INTD.8065/GitHub.INTD-8065/Data.Lect.INTD")
+cuckoos.frm <- read.csv("cuckoosred.csv")
+names(cuckoos.frm)
+attach(cuckoos.frm)
+class(egg.length)
+class(host.species)
+summary(egg.length)
+summary(host.species)
+lapply(split(egg.length,host.species),summary)
+lapply(split(egg.length,host.species),sd)
+plot(host.species,egg.length)
+```
+An analysis of variance model can be fitted in R using command __aov ()__
+```{r}
+cuckoos.mod1 <- aov(egg.length~host.species)
+summary(cuckoos.mod1)
+```
+According to this ANOVA table, the data gives enough evidence to reject the null hypothesis of equality of the means. This means that the lengths of cuckoos eggs vary according the the surrogate parents species.
+We can still use the command lm for this family of models, and results obtained are equivalent
+```{r}
+anova(lm(egg.length~host.species))
+par(mfrow=c(2,2))
+plot(cuckoos.mod1)
+```
+Use model.tables to find means of all variables 
+```{r}
+model.tables(cuckoos.mod1, type = "means")
+```
+```{r}
+levels(host.species)
+coef(cuckoos.mod1)
+coef(cuckoos.mod1)[2:5]+23.12142857
+
+options(contrasts=c("contr.sum","contr.poly"))
+cuckoos.mod2 = aov(egg.length~host.species)
+coef(cuckoos.mod2)
+coef(cuckoos.mod2)[2:5]+22.56395238
+22.56395238-sum(coef(cuckoos.mod2)[2:5])
+```
+Least Significant Difference test (LSD test)
+In R, the means of the groups can be compared using Least Significant Difference using the command pairwise.t.test
+```{r}
+pairwise.t.test(egg.length,host.species,p.adjust.method="none")
+```
+Adjusting p-values for controlling Type I error Bonferroni method.
+The Type I error level α us adjusted for each individual test by α = αT/C
+where αT is the desired global level and C is the total number of
+comparisons. It is equivalent to multiply each p-value by C.
+This is a very conservative method, specially when the number of comparisons is very large. (Decreasing α ⇒ increasing β).
+```{r}
+pairwise.t.test(egg.length,host.species,p.adjust.method="bonferroni")
+```
+Sequential Bonferroni (Holm 1979)
+The C test statistics (or the p-values) are ranked from largest to smallest and the smallest p-value is tested at α/c, the next at
+α/(c − 1), the next at α/(c − 2), etc.
+This procedure provides more power for individual tests and is recommended for any situation in which the Bonferroni adjustment is applicable.
+```{r}
+pairwise.t.test(egg.length,host.species,p.adjust.method="holm")
+```
+Hochberg’s procedure
+The procedure is similar to Holm’s, but works in reverse. The largest p-value is tested at α, rejecting all other tests if this one is significant. If not significant, the next largest is tested against α/2, and so on. Hochberg’s procedure is slightly more powerful that Holm’s
+```{r}
+pairwise.t.test(egg.length,host.species,p.adjust.method="hochberg")
+```
+Tukey’s HSD test
+(HSD=Honestly Significant Difference)
+John Tukey introduced intervals based on the range of the sample means rather than the individual differences. The intervals returned by this function are based on his Studentized Range Statistic. Technically the intervals constructed in this way would only apply to balanced designs where there are the same number of observations made at each level of the factor. The function in R incorporates an adjustment for sample size that produces sensible intervals for mildly unbalanced designs.
+```{r}
+TukeyHSD(cuckoos.mod1)
+plot(TukeyHSD(cuckoos.mod1))
+```
