@@ -1,0 +1,32 @@
+---
+title: "Homework 7"
+author: "Jose Nieves"
+date: "March 15, 2016"
+output: html_document
+---
+# HOMEWORK 7
+
+Interpret the coefficients of the selected model for the prostate cancer data in terms of odds. You can follow the analysis in the rotavirus vaccine example.
+
+###### Make generalized linear model of prostate data frame
+```{r}
+prostate.lm <- glm(Nodes ~ Xray + Stage, family = binomial)
+summary(prostate.lm)
+```
+
+The odds ratio corresponding to the Xray is
+```{r}
+exp(2.1194)
+```
+
+The odds ratio corresponding to the Stage is
+```{r}
+exp(1.5883)
+```
+
+```{r}
+predictions <- cbind(Xray, Stage, 
+                + round(predict(prostate.lm, type = "response"), 4))
+
+```
+This shows that there is a higher propability of identifying prostate cancer nodes performing an Xray procedure before surgery, compared to identifying the stage of the node with finger palpations.

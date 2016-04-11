@@ -1,0 +1,103 @@
+---
+title: "Survival Analysis"
+author: "M. E. Perez"
+date: "March 17, 2016"
+output: html_document
+---
+#Introduction to Survival Analysis
+
+###Time to event data
+
+In many clinical studies, the variable of interest is the time until something happens:
+*Time of survival of a patient participating in a new drug study.
+*Time from vaccination till a child suffers a rotavirus positive diarrhea. *Lifetime of an electronic component.
+All these are examples of time to event data or survival data.
+
+###Survival function and hazard function
+
+For a time to event random variable T , the survival function is defined as:
+
+S(t)=P(T >t)=1−F(t)
+
+Where F is the distribution function of T (F(t) = P(T ≤ t)). Then, the survival function is the probability that the time to the event is greater than t.
+Another important function is the hazard function or force of mortality h(t), which measures the (infinitesimal) risk of dying within a short interval of time t, given that the subject is alive at time t.
+
+h(t)= f(t) = f(t) S(t) 1−F(t)
+
+Here, f(t) is the density function of the variable T.
+
+###Censoring
+
+Sometimes, it is not possible to get information about all the participants in a survival study
+*Loss to follow up: the patient stop attending follow up meetings (moved to other city, etc.)
+*Dropout: The effects of a therapy are so bad that the treatment has to be stopped.
+*Termination of the study: (for studies with pre-determined stop dates).
+Death due to other causes.
+
+When some of this situations happens, we say that our data is censored. There are several types of censoring, but we will concentrate on right
+censoring.
+
+The main assumption made to deal with this situation is that, conditional on the values of any explanatory variable, the prognosis for any individual who has survived to a certain time t should no be affected if the individual is censored at t. In other words, survival condition and reason of loss are independent.
+
+Also, it can be seen that in this context the time origin need not to be (and usually is not) the same calendar time for each individual.
+
+###Kaplan-Meier estimator for the survival function
+
+Let t1 < t2 < ... < tk the times when events happen, and let Si−1 the subjects surviving until time time ti−1 and that have not been censored. In the period from ti−1 and ti, Si subjects survive, di subjects fail, and li subjectsarecensoredattimeti. ThusSi−1 =Si +di +li.
+We can estimate the probability of surviving to time ti given that a patient has survived up to time ti−1 by
+ 
+pˆi= (1−di/Si-1)  = (1−di/Si+di+li )
+
+The li subjects censored at time ti do not contribute to the estimation of the survival function at time > ti . However, these subjects do contribute to the estimation of the survival function at time ≤ ti .
+
+##Example
+
+For this example, we will use the `Melanoma` dataset in package `MASS`, collected by K. T. Drzewiecki and reproduced in P. K. Andersen, O. Borgan, R. D. Gill and N. Keiding (1993) Statistical Models based on Counting Processes. Springer. This data frame contains on 205 patients in Denmark with malignant melanoma
+
+```{r}
+library(MASS)
+attach(Melanoma)
+names(Melanoma)
+```
+The variable `status` is an indicator of the patient's status by the end of the study: 1 means "dead from malignant melanoma", 2 means "alive on January 1, 1978", and 3 means "dead from other causes. The variable `time` is the observation time in days,`ulcer` indicates (1 for present and 2 for absent) whether the tumor was ulcerated, `thickness` is the thickness in 1/100 mm, `age` is the age of the patient in years and `sex` contains the gender of the patient (0 for women and 1 for men).
+
+Only `status=1` will be considered an event (2 and 3 are considered censorings). We will then construct a survival object using `time` and `status`.
+
+```{r}
+library(survival)
+surv.melanom <- Surv(time,status==1)
+surv.melanom
+```
+The plus signs indicates censored observations.
+
+Using this survival object, we will fit a Kaplan-Meier survival curve with command `survfit`.
+```{r}
+melanoma.km <- survfit(surv.melanom~1)
+summary(melanoma.km)
+plot(melanoma.km)
+```
+
+By default, `plot` adds to the graph the confidence intervals. 
+_Note: that this intervals are not symmetrical, because they were calculated in the log scale and then transformed._
+
+It is useful to plot two or more survival curves in the same graph for direct comparison. For example, we can fit survival curves by sex.
+
+```{r}
+melanoma.sex <- survfit(surv.melanom~sex)
+plot(melanoma.sex)
+```
+
+Note that when plotting more than one survival curve, the confidence intervals are not displayed (in order to avoid confusing graphs). Nevertheless, we can plot the confidence intervals using `conf.int=T`.
+
+```{r}
+plot(melanoma.sex,conf.int=T, col=c("red","blue"))
+```
+
+It can be seen that the curve for women is over the curve for men, indicating higher survival. Nevertheless, confidence intervals are overimposed throughtout the whole graph.
+
+For comparing this two curves, we can use the command `survdiff`
+
+```{r}
+survdiff(surv.melanom~sex)
+```
+The difference of survival between men and women seems to be significant.

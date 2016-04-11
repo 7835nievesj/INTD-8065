@@ -1,0 +1,177 @@
+########################################
+# Program: Biostrings (version 2.38.4), a Bioconductor package
+# Rundate: Fri Apr  8 14:51:48 2016
+########################################
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]
+# 2: gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]
+# Matrix: NA
+# Gap_penalty: 14.0
+# Extend_penalty: 4.0
+#
+# Length: 1884
+# Identity:    1862/1884 (98.8%)
+# Similarity:    NA/1884 (NA%)
+# Gaps:          21/1884 (1.1%)
+# Score: 7913.259
+#
+#
+#=======================================
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]    1 MDLSALRVEEVQNVINAMQKILECPICLELIKEPVSTKCDHIFCKFCMLK     50
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]      1 MDLSALRVEEVQNVINAMQKILECPICLELIKEPVSTKCDHIFCKFCMLK     50
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]   51 LLNQKKGPSQCPLCKNDITKRSLQESTRFSQLVEELLKIICAFQLDTGLE    100
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]     51 LLNQKKGPSQCPLCKNDITKRSLQESTRFSQLVEELLKIICAFQLDTGLE    100
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  101 YANSYNFAKKENNSPEHLKDEVSIIQSMGYRNRAKRLLQSEPENPSLQET    150
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    101 YANSYNFAKKENNSPEHLKDEVSIIQSMGYRNRAKRLLQSEPENPSLQET    150
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  151 SLSVQLSNLGTVRTLRTKQRIQPQKTSVYIELGSDSSEDTVNKATYCSVG    200
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    151 SLSVQLSNLGTVRTLRTKQRIQPQKTSVYIELGSDSSEDTVNKATYCSVG    200
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  201 DQELLQITPQGTRDEISLDSAKKAACEFSETDVTNTEHHQPSNNDLNTTE    250
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    201 DQELLQITPQGTRDEISLDSAKKAACEFSETDVTNTEHHQPSNNDLNTTE    250
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  251 KRAAERHPEKYQGSSVSNLHVEPCGTNTHASSLQHENSSLLLTKDRMNVE    300
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    251 KRAAERHPEKYQGSSVSNLHVEPCGTNTHASSLQHENSSLLLTKDRMNVE    300
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  301 KAEFCNKSKQPGLARSQHNRWAGSKETCNDRRTPSTEKKVDLNADPLCER    350
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    301 KAEFCNKSKQPGLARSQHNRWAGSKETCNDRRTPSTEKKVDLNADPLCER    350
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  351 KEWNKQKLPCSENPRDTEDVPWITLNSSIQKVNEWFSRSDELLGSDDSHD    400
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    351 KEWNKQKLPCSENPRDTEDVPWITLNSSIQKVNEWFSRSDELLGSDDSHD    400
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  401 GESESNAKVADVLDVLNEVDEYSGSSEKIDLLASDPHEALICKSERVHSK    450
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    401 GESESNAKVADVLDVLNEVDEYSGSSEKIDLLASDPHEALICKSERVHSK    450
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  451 SVESNIEDKIFGKTYRKKASLPNLSHVTENLIIGAFVTEPQIIQERPLTN    500
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    451 SVESNIEDKIFGKTYRKKASLPNLSHVTENLIIGAFVTEPQIIQERPLTN    500
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  501 KLKRKRRPTSGLHPEDFIKKADLAVQKTPEMINQGTNQTEQNGQVMNITN    550
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    501 KLKRKRRPTSGLHPEDFIKKADLAVQKTPEMINQGTNQTEQNGQVMNITN    550
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  551 SGHENKTKGDSIQNEKNPNPIESLEKESAFKTKAEPISSSISNMELELNI    600
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    551 SGHENKTKGDSIQNEKNPNPIESLEKESAFKTKAEPISSSISNMELELNI    600
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  601 HNSKAPKKNRLRRKSSTRHIHALELVVSRNLSPPNCTELQIDSCSSSEEI    650
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    601 HNSKAPKKNRLRRKSSTRHIHALELVVSRNLSPPNCTELQIDSCSSSEEI    650
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  651 KKKKYNQMPVRHSRNLQLMEGKEPATGAKKSNKPNEQTSKRHDSDTFPEL    700
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    651 KKKKYNQMPVRHSRNLQLMEGKEPATGAKKSNKPNEQTSKRHDSDTFPEL    700
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  701 KLTNAPGSFTKCSNTSELKEFVNPSLPREEKEEKLETVKVSNNAEDPKDL    750
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    701 KLTNAPGSFTKCSNTSELKEFVNPSLPREEKEEKLETVKVSNNAEDPKDL    750
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  751 MLSGERVLQTERSVESSSISLVPGTDYGTQESISLLEVSTLGKAKTEPNK    800
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    751 MLSGERVLQTERSVESSSISLVPGTDYGTQESISLLEVSTLGKAKTEPNK    800
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  801 CVSQCAAFENPKGLIHGCSKDNRNDTEGFKYPLGHEVNHSRETSIEMEES    850
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    801 CVSQCAAFENPKGLIHGCSKDNRNDTEGFKYPLGHEVNHSRETSIEMEES    850
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  851 ELDAQYLQNTFKVSKRQSFAPFSNPGNAEEECATFSAHSGSLKKQSPKVT    900
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    851 ELDAQYLQNTFKVSKRQSFAPFSNPGNAEEECATFSAHSGSLKKQSPKVT    900
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  901 FECEQKEENQGKNESNIKPVQTVNITAGFPVVGQKDKPVDNAKCSIKGGS    950
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    901 FECEQKEENQGKNESNIKPVQTVNITAGFPVVGQKDKPVDNAKCSIKGGS    950
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens]  951 RFCLSSQFRGNETGLITPNKHGLLQNPYRIPPLFPIKSFVKTKCKKNLLE   1000
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]    951 RFCLSSQFRGNETGLITPNKHGLLQNPYRIPPLFPIKSFVKTKCKKNLLE   1000
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1001 ENFEEHSMSPEREMGNENIPSTVSTISRNNIRENVFKEASSSNINEVGSS   1050
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1001 ENFEEHSMSPEREMGNENIPSTVSTISRNNIRENVFKEASSSNINEVGSS   1050
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1051 TNEVGSSINEIGSSDENIQAELGRNRGPKLNAMLRLGVLQPEVYKQSLPG   1100
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1051 TNEVGSSINEIGSSDENIQAELGRNRGPKLNAMLRLGVLQPEVYKQSLPG   1100
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1101 SNCKHPEIKKQEYEEVVQTVNTDFSPYLISDNLEQPMGSSHASQVCSETP   1150
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1101 SNCKHPEIKKQEYEEVVQTVNTDFSPYLISDNLEQPMGSSHASQVCSETP   1150
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1151 DDLLDDGEIKEDTSFAENDIKESSAVFSKSVQKGELSRSPSPFTHTHLAQ   1200
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1151 DDLLDDGEIKEDTSFAENDIKESSAVFSKSVQKGELSRSPSPFTHTHLAQ   1200
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1201 GYRRGAKKLESSEENLSSEDEELPCFQHLLFGKVNNIPSQSTRHSTVATE   1250
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1201 GYRRGAKKLESSEENLSSEDEELPCFQHLLFGKVNNIPSQSTRHSTVATE   1250
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1251 CLSKNTEENLLSLKNSLNDCSNQVILAKASQEHHLSEETKCSASLFSSQC   1300
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1251 CLSKNTEENLLSLKNSLNDCSNQVILAKASQEHHLSEETKCSASLFSSQC   1300
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1301 SELEDLTANTNTQDPFLIGSSKQMRHQSESQGVGLSDKELVSDDEERGTG   1350
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1301 SELEDLTANTNTQDPFLIGSSKQMRHQSESQGVGLSDKELVSDDEERGTG   1350
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1351 LEENNQEEQSMDSNLGEAASGCESETSVSEDCSGLSSQSDILTTQQRDTM   1400
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1351 LEENNQEEQSMDSNLGEAASGCESETSVSEDCSGLSSQSDILTTQQRDTM   1400
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1401 QHNLIKLQQEMAELEAVLEQHGSQPSNSYPSIISDSSALEDLRNPEQSTS   1450
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1401 QHNLIKLQQEMAELEAVLEQHGSQPSNSYPSIISDSSALEDLRNPEQSTS   1450
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1451 EKDSHIHGQRNNSMFSKRPREHISVLTSQKSSEYPISQNPEGLSADKFEV   1500
+                                                                                                        ||                      ||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1451 EKA---------------------VLTSQKSSEYPISQNPEGLSADKFEV   1479
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1501 SADSSTSKNKEPGVERSSPSKCPSLDDRWYMHSCSGSLQNRNYPSQEELI   1550
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1480 SADSSTSKNKEPGVERSSPSKCPSLDDRWYMHSCSGSLQNRNYPSQEELI   1529
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1551 KVVDVEEQQLEESGPHDLTETSYLPRQDLEGTPYLESGISLFSDDPESDP   1600
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1530 KVVDVEEQQLEESGPHDLTETSYLPRQDLEGTPYLESGISLFSDDPESDP   1579
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1601 SEDRAPESARVGNIPSSTSALKVPQLKVAESAQSPAAAHTTDTAGYNAME   1650
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1580 SEDRAPESARVGNIPSSTSALKVPQLKVAESAQSPAAAHTTDTAGYNAME   1629
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1651 ESVSREKPELTASTERVNKRMSMVVSGLTPEEFMLVYKFARKHHITLTNL   1700
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1630 ESVSREKPELTASTERVNKRMSMVVSGLTPEEFMLVYKFARKHHITLTNL   1679
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1701 ITEETTHVVMKTDAEFVCERTLKYFLGIAGGKWVVSYFWVTQSIKERKML   1750
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1680 ITEETTHVVMKTDAEFVCERTLKYFLGIAGGKWVVSYFWVTQSIKERKML   1729
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1751 NEHDFEVRGDVVNGRNHQGPKRARESQDRKIFRGLEICCYGPFTNMPTDQ   1800
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1730 NEHDFEVRGDVVNGRNHQGPKRARESQDRKIFRGLEICCYGPFTNMPTDQ   1779
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1801 LEWMVQLCGASVVKELSSFTLGTGVHPIVVVQPDAWTEDNGFHAIGQMCE   1850
+                                                                                                        ||||||||||||||||||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1780 LEWMVQLCGASVVKELSSFTLGTGVHPIVVVQPDAWTEDNGFHAIGQMCE   1829
+
+gi|237681119|ref|NP_009231.2| breast cancer type 1 susceptibility protein isoform 2 [Homo sapiens] 1851 APVVTREWVLDSVALYQCQELDTYLIPQIPHSHY   1884
+                                                                                                        ||||||||||||||||||||||||||||||||||
+gi|6552299|ref|NP_009225.1| breast cancer type 1 susceptibility protein isoform 1 [Homo sapiens]   1830 APVVTREWVLDSVALYQCQELDTYLIPQIPHSHY   1863
+
+
+#---------------------------------------
+#---------------------------------------

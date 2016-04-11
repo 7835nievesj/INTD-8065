@@ -1,0 +1,88 @@
+---
+title: "Week-8.Rmd"
+author: "Jose Nieves"
+date: "March 18, 2016"
+output: html_document
+---
+#Analysis of Frequencies
+
+###Example
+When a patient is diagnosed as having cancer of the prostate, an important question in deciding on treatment strategy for the patient is whether the cancer has spread to the neighboring lymphnodes.. The question is so critical in prognosis and treatment that it is customary to operate on the patient (i.e. perform a laparotomy) for the sole purpose of examining the nodes and removing tissue samples to examine under the microscope for evidence of cancer. However, certain variables that can be measured without surgery are predictive of the nodal involvement, Data in file prostate.dat correspond for 53 prostate cancer patients receiving surgery, and we sant to determine which of five preoperative variables are predictive of nodal involvement.
+
+These variables are
+1 X ray reading (Xray)
+2 Result of a pathological analysis of a biopsy (Grade)
+3 Stage of the tumour obtained by palpation with the finger via the rectum. (Stage: 1= Positive finding, 0= Negative finding).
+4 Age at diagnosis (Age)
+5 Level of serum acid phosphatase (×100, called Acid)
+The response variable is the finding at surgery (1=nodal involvement, 0=no nodal involvement)
+
+```{r}
+prostate.frm <- read.csv("~/Documents/INTD.8065/GitHub.INTD-8065/Data.Lect.INTD-8065/prostate.txt", sep="", header = T)
+View(prostate.frm)
+table(prostate.frm$Nodes, prostate.frm$Xray)
+prostate.mod1 <- glm(Nodes~Xray + Grade + Stage + Age + Acid, family = binomial)
+summary(prostate.mod1)
+```
+The model performs equivalently to the saturated model, and so it doesn’t seem necessary to include interactions between the variables.
+Lets try to simplify the model
+
+```{r}
+drop1(prostate.mod1, test = "Chisq")
+```
+The variable to be eliminated seems to be Grade
+
+
+```{r}
+prostate.mod2 <- glm(Nodes ~ Xray + Stage + Age + Acid, family = binomial)
+summary(prostate.mod2)
+```
+Again, this simpler model fits well the data, and we’ll try to simplify it even more.
+
+```{r}
+drop1(prostate.mod2, test = "Chisq")
+```
+The variable that will be removed is Age.
+
+```{r}
+prostate.mod3 <- glm(Nodes ~ Xray + Stage + Acid, family = binomial)
+summary(prostate.mod3)
+```
+This simpler model still fits well the data 
+
+```{r}
+drop1(prostate.mod3, test = "Chisq")
+```
+It is possible to remove the variable Acid
+
+```{r}
+prostate.mod4 <- glm(Nodes ~ Xray + Stage, family = binomial)
+summary(prostate.mod4)
+```
+
+As a final check, we can compare our last model with the first model we fitted
+```{r}
+anova(prostate.mod4, prostate.mod1, test = "Chisq")
+```
+
+With base in the model, we can predict the probabilities of the 
+involvement of the lymphatic nodes for all possible combinations of level 
+of Xray and Stage.
+```{r}
+predict(prostate.mod4,data.frame(Xray=c(0,0,1,1), 
+Stage=c(0,1,0,1)),type="response")
+```
+The highest probability of node involvement corresponds to those patients with positive X rays reading and positive result in the pathological examination of the biopsy.
+
+
+
+
+
+
+
+
+
+
+
+
+

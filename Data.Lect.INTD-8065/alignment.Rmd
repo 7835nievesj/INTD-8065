@@ -1,0 +1,92 @@
+---
+title: "Alignments"
+author: "Humberto Ortiz-Zuazaga"
+date: "03/08/2016"
+output: pdf_document
+---
+
+Following the Biostrings vignettes and the DECIPHER vignette: "The Art of Multiple Sequence Alignment in R".
+
+At least once, you must install DECIPHER (and Biostrings).
+
+```{r}
+source("http://bioconductor.org/biocLite.R")
+biocLite("DECIPHER")
+```
+Load Biostrings, read in example data, and display the unaligned sequences.
+
+```{r}
+library(Biostrings)
+```
+
+# Pairwise alignment of simple strings
+
+```{r}
+a1 <- pairwiseAlignment(pattern="acacacta", subject="agcacacac", gapOpening=1, gapExtension=0)
+a1
+```
+
+We can specify a substitution matrix with the scores we want.
+
+```{r}
+mat <- nucleotideSubstitutionMatrix(match = 0, mismatch = -1, baseOnly = TRUE)
+a1 <- pairwiseAlignment(DNAString("acacactac"),
+                        DNAString("agcacacac"),
+                        gapOpening=1, 
+                        gapExtension=0,
+                        substitutionMatrix=mat)
+a1
+```
+
+# Pairwise alignment with biostrings. 
+
+Download protein sequences for two isoforms of BRCA1:
+
+- https://www.ncbi.nlm.nih.gov/protein/NP_009231.2
+- https://www.ncbi.nlm.nih.gov/protein/NP_009225.1
+
+We can use `Biostrings::readAAStringSet` to read in the fasta format files.
+
+```{r}
+s1 <- readAAStringSet("sequence.fasta.txt")
+s2 <- readAAStringSet("sequence.fasta-2.txt")
+```
+
+These sequences can be aligned with amino acid substituition matrices:
+
+```{r}
+pw <- pairwiseAlignment(s1, s2)
+```
+
+The resulting alignment can be written out to a text file.
+
+```{r}
+writePairwiseAlignments(pw, file="test.pair")
+```
+
+# Multiple alignment
+
+We will use the DECIPHER library for additional analyses.
+
+```{r}
+biocLite("DECIPHER")
+```
+
+We can also read in a set of fasta formatted sequences all at the same time.
+
+```{r}
+fas <- system.file("extdata", "50S_ribosomal_protein_L2.fas", package="DECIPHER")
+dna <- readDNAStringSet(fas)
+dna
+```
+
+The `dna` object has 317 sequences of around 900 bases from different organism's 50S ribosomal subunit.
+
+Translate the DNA to amino acids and align the peptides, then browse the resulting alignment.
+
+```{r}
+AA <- AlignTranslation(dna, asAAStringSet=TRUE)
+BrowseSeqs(AA, htmlFile="ribo.html", openURL = FALSE, highlight=1)
+```
+
+You should now have a file called `ribo.html` with the aligned sequences. You can open the alignment in RStudio and send it to your web browser.
